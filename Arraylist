@@ -1,0 +1,46 @@
+package com.company;
+
+import java.util.*;
+
+
+public class Arraylist1 {
+
+    public static void main(String[] args) {
+        // ArrayList<String> obj = new ArrayList<String>();  // using generic to create array list
+        try {
+            ArrayList obj1 = new ArrayList();   // creating array list without generic
+            obj1.add("Samarth");
+            obj1.add("Porwal");
+            obj1.add("Priyanshi");
+            obj1.add("Aastha");
+            obj1.add("Vishakha");
+            obj1.add(1, "Nikunj");  // this will add nikunj at index no. 1 ( beside nitya )
+            obj1.remove(3); // this will remove the element at index no.3
+            obj1.add("Nitya");
+
+            HashSet obj2 = new HashSet(obj1);
+
+            // it will convert the array list into an hashset so it will print according to hashcode(insertion order is not mainatined ) and only unique element
+
+            LinkedHashSet obj3 = new LinkedHashSet(obj1);
+
+            // it is a combination of linkedlist and hashset but here the insertion order is maintained and duplicate not allowed
+
+
+
+            // sorting of array list can be done by using the Collections.sort() static method present in java.util package .
+
+            // Collections.sort(obj1);
+
+
+            System.out.println(obj2);
+            System.out.println(obj3);
+            System.out.println(obj1);
+
+
+        } catch (Exception e) {
+            System.out.println("user entered an invalid index no to add or remove from the list ");
+
+
+        }
+    }}
