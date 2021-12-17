@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class treeset {
+    public static void main(String[] args) {
+        TreeSet obj = new TreeSet();
+       try {
+           obj.add("Samarth");
+           obj.add("Kunal");
+           obj.add("Raghav");
+           obj.add("Aman");
+           obj.add("Vishwas");
+           obj.add(50);  // it will create classcastexception
+           obj.add(null);  // it will create nullpointerexception
+           System.out.println(obj);
+       }
+       catch (ClassCastException e){
+
+           System.out.println("Heterogeneous objects are not allowed in Treeset");
+
+       }
+       catch (NullPointerException e){
+
+           System.out.println("null insertion are not allowed in treeset");
+       }
+
+    }
+}
